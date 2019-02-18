@@ -14,6 +14,17 @@ db.createCollection("estudio");
 ```
 
 ---
+### Creating Indexes
+```javascript
+db.estudio.createIndex( { "banda.nome": 1 } )
+```
+
+### Creating Indexes
+```javascript
+db.estudio.createIndex( { "data": 1 } )
+```
+
+---
 ### Inserting data:
 ##### Albertio e Banda
 ```javascript
