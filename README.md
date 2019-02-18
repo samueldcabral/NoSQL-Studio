@@ -107,3 +107,18 @@ db.estudio.find({"banda.estilo_musical": {$ne:"rock"}}, {"banda.estilo_musical":
 ```javascript
 db.estudio.find({"banda.nome": /^Papa/}, {"banda.nome":1})
 ```
+
+##### Accessing array
+```javascript
+db.estudio.find({"tecnico_som.telefone.0": "9999-1234"})
+```
+
+##### Accessing embedded structure
+```javascript
+db.estudio.find({"tecnico_som.endereco.logradouro": /^Rua/})
+```
+
+##### Personalized query, show all the documents where the hourly price of the room is greater than or equal to 35 and the quantity of hours are bigger than 3
+```javascript
+db.estudio.find({"sala.valor_hora": {$gte: 35},"quantidade_horas": {$gt: 3}})
+```
