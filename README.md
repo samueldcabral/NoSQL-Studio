@@ -310,6 +310,11 @@ db.estudio.find({data: {$lt: new Date(2019, 02, 19)}})
 db.estudio.find({quantidade_horas: {$gte: 3}})
 ```
 
+##### Find all documents with the quantity of hours greater than or equal to 6
+```javascript
+db.estudio.find({quantidade_horas: {$gte: 6}})
+```
+
 ##### Fetch data with projection, in this case only showing the name of the band, the name of the studio room they selected and ommiting the _id
 ```javascript
 db.estudio.find({"banda.nome": {$in: ["Zero Bronca", "Papaninfa"]}}, {"banda.nome": 1, "sala.nome":1, "_id":0})
@@ -330,6 +335,11 @@ db.estudio.find({"banda.estilo_musical": {$ne:"rock"}}, {"banda.estilo_musical":
 db.estudio.find({"banda.nome": /^Papa/}, {"banda.nome":1})
 ```
 
+##### Find bands using Regex to find all occurences that the name of the musical style begins with rock
+```javascript
+db.estudio.find({"banda.estilo_musical": /rock$/}, {"banda.nome":1, "banda.estilo_musical": 1})
+```
+
 ##### Accessing array
 ```javascript
 db.estudio.find({"tecnico_som.telefone.0": "9999-1234"})
@@ -344,3 +354,10 @@ db.estudio.find({"tecnico_som.endereco.logradouro": /^Rua/})
 ```javascript
 db.estudio.find({"sala.valor_hora": {$gte: 35},"quantidade_horas": {$gt: 3}})
 ```
+
+---
+### SQL-to_NOSQL mapping:
+
+![1](https://i.imgur.com/NuvkQzD.png "1")
+![2](https://i.imgur.com/i8ITMou.png "2")
+![3](https://i.imgur.com/w0Guv5H.png "3")
