@@ -8,7 +8,7 @@
 
 # ii. Operations
 ---
-## Creating the Collection:
+### Creating the Collection:
 ```javascript
 db.createCollection("estudio");
 ```
