@@ -1,12 +1,12 @@
-# NoSQL Studio
+# NoSQL - Musical Studio
 
 ## This is a simple project for uni where I implement a script for a document-based database.
-## It's a musical estudio
+## It's a musical estudio! Rock On!
 
-#i. Concept Model
+# i. Concept Model
 ![Concept Model](https://i.imgur.com/FMvV9jw.jpg "Concept Model")
 
-#ii. Operations
+# ii. Operations
 ---
 ## Creating the Collection:
 ```javascript
@@ -277,12 +277,14 @@ db.estudio.update({"banda.nome": "Papaninfa"}, {$set:{"status":"finalizado"}})
 db.estudio.update({"banda.nome": "Zero Bronca"}, {$set:{"banda.integrante.1.nome":"Luan Alves"}})
 ```
 
+---
 ### Deleting data:
 ##### Deleting the document with the incorrect band name: Fithar Monkeys
 ```javascript
 db.estudio.deleteOne( { "banda.nome": "Fithar Monkeys" } )
 ```
 
+--- 
 ### Reading data:
 ##### Find all documents in the estudio collection
 ```javascript 
@@ -356,7 +358,7 @@ db.estudio.find({"sala.valor_hora": {$gte: 35},"quantidade_horas": {$gt: 3}})
 ```
 
 ---
-### SQL-to_NOSQL mapping:
+### Conceptual Model to NoSQL Mapping:
 
 ![1](https://i.imgur.com/NuvkQzD.png "1")
 ![2](https://i.imgur.com/i8ITMou.png "2")
