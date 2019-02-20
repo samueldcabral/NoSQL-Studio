@@ -19,7 +19,6 @@ db.createCollection("estudio");
 db.estudio.createIndex( { "banda.nome": 1 } )
 ```
 
-### Creating Indexes
 ```javascript
 db.estudio.createIndex( { "data": 1 } )
 ```
