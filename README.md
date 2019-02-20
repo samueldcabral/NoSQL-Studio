@@ -1,7 +1,7 @@
 # NoSQL - Musical Studio
 
 ## This is a simple project for uni where I implement a script for a document-based database.
-## It's a musical estudio! Rock On!
+## It's a musical studio! Rock On!
 
 # i. Concept Model
 ![Concept Model](https://i.imgur.com/FMvV9jw.jpg "Concept Model")
